@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "hm-agentic-retail-assistant"
+version = "0.1.0"
+description = "Agentic retail assistant built on the H&M dataset"
+authors = ["Ayesha Mendoza <ayesha.mendoza@gmail.com>"]
+readme = "README.md"
+
+# Tell Poetry where the package lives (src layout)
+packages = [
+    { include = "hm_agentic_retail_assistant", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.15"
+pandas = "^2.2"
+pyarrow = "^15.0"
+pydantic = "^2.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+ruff = "^0.4"
+mypy = "^1.9"
+ipykernel = "^6.29"
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
+
+# --- Tooling (lightweight, low-noise) ---
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
