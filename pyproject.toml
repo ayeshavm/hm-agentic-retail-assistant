@@ -16,6 +16,7 @@ pandas = "^2.2"
 pyarrow = "^15.0"
 pydantic = "^2.6"
 matplotlib = "^3.10.8"
+polars = "^1.37.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0"
